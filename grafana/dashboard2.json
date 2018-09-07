@@ -98,7 +98,7 @@
           "text": "5678",
           "value": "5678"
         },
-        "hide": 2,
+        "hide": 0,
         "includeAll": false,
         "label": "Client Id",
         "multi": false,
@@ -106,8 +106,8 @@
         "options": [
           {
             "selected": false,
-            "text": "UNDEFINED",
-            "value": "UNDEFINED"
+            "text": "<type the client id here>",
+            "value": ""
           }
         ],
         "query": "UNDEFINED",
