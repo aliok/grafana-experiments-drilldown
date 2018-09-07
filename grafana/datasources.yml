@@ -1,0 +1,13 @@
+datasources:
+- name: Postgres
+  type: postgres
+  access: proxy
+  url: postgres:5432
+  user: "postgres"
+  secure_json_data:
+    password: postgres
+  database: "test"
+  version: 1
+  editable: true
+  json_data:
+    sslmode: "disable"

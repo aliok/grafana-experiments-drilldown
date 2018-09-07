@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: test
+
+  grafana:
+    image: grafana/grafana:5.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/config.ini:/etc/grafana/grafana.ini
+      - ./grafana/datasources.yml:/etc/grafana/conf/provisioning/datasources/datasources.yml
+      - ./grafana/dashboards.yml:/etc/grafana/conf/provisioning/dashboards/dashboards.yml
+      - ./grafana/grafana-primary-dashboard.json:/etc/grafana-dashboards/grafana-primary-dashboard.json
+      - ./grafana/mobile-services-dashboard.json:/etc/grafana-dashboards/mobile-services-dashboard.json
