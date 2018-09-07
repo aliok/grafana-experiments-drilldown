@@ -18,5 +18,6 @@ services:
       - ./grafana/config.ini:/etc/grafana/grafana.ini
       - ./grafana/datasources.yml:/etc/grafana/conf/provisioning/datasources/datasources.yml
       - ./grafana/dashboards.yml:/etc/grafana/conf/provisioning/dashboards/dashboards.yml
-      - ./grafana/grafana-primary-dashboard.json:/etc/grafana-dashboards/grafana-primary-dashboard.json
+      - ./grafana/dashboard1.json:/etc/grafana-dashboards/dashboard1.json
+      - ./grafana/dashboard2.json:/etc/grafana-dashboards/dashboard2.json
       - ./grafana/mobile-services-dashboard.json:/etc/grafana-dashboards/mobile-services-dashboard.json
