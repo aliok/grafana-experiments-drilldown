@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS mobileappmetrics;
 
 CREATE UNLOGGED TABLE IF NOT EXISTS mobileappmetrics (
-  clientId char(80) NOT NULL CHECK (clientId <> ''),
-  event_type char(30) NOT NULL CHECK(event_type <> ''),
+  clientId varchar(80) NOT NULL CHECK (clientId <> ''),
+  event_type varchar(30) NOT NULL CHECK(event_type <> ''),
   event_time timestamptz NOT NULL DEFAULT now(),
   client_time timestamptz DEFAULT now(),
   data jsonb NOT NULL,
